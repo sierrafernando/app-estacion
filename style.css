@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+
+* {
+	margin:0;
+    padding:0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    font-family: 'Ubuntu';
+}
+
+body{
+ background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
+}
+
+h1{
+	font-size: 18pt;
+}
+
+h2{
+	font-size: 15pt;
+}
+
+h3{
+	font-size: 12pt;
+}
+
+#wrapper{
+	width: 100vw;
+	height: 100vh;
+	padding: 20px 33%;
+	color: white;
+}
+
+#list-estacion{
+	margin: 10px 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	color: white;
+}
+
+.centrar{
+	display:flex;
+	align-items:center;
+}
+
+.btn-estacion{
+	background-color: rgba(0, 0, 0, 0.55);
+	color: white;
+	text-decoration: none;
+	border-radius: 10px;
+	padding:15px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.rojo{
+	color: red;
+}
+
+.derecha{
+	display: flex;
+	justify-content: right;
+}
