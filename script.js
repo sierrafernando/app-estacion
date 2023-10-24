@@ -27,8 +27,10 @@ function addBtnEstacion(info){
 	let tpl = document.querySelector("#tpl-btn-estacion");
 	let clon = tpl.content.cloneNode(true);
 
+	console.log(info);
+
 	// cargamos los datos del botÃ³n clonado
-	clon.querySelector(".btn-estacion").setAttribute("href", "./panel.php?chipid="+info.chipid);
+	clon.querySelector(".btn-estacion").setAttribute("href", "./detalle.php?chipid="+info.chipid);
 	clon.querySelector(".estacion-ubicacion").innerHTML= '<i class="rojo material-symbols-outlined">location_on</i>'+'<h3>'+info.ubicacion+'<h3>';
 	clon.querySelector(".estacion-visitas").innerHTML = '<h3>'+info.visitas+'</h3>'+'<i class="rojo material-symbols-outlined">rss_feed</i>'
 	clon.querySelector(".estacion-apodo").innerHTML = '<h2>'+info.apodo+'</h2>';

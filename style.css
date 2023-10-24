@@ -8,6 +8,30 @@
     font-family: 'Ubuntu';
 }
 
+/*--------COLORES--------*/
+
+.rojo{
+	color: red;
+}
+
+.naranja{
+	color: orange;
+}
+
+.celeste{
+	color: cyan;
+}
+
+.verde{
+	color: green;
+}
+
+.amarillo{
+	color: yellow;
+}
+
+/*--------ELEMENTOS PAGINA--------*/
+
 body{
  background: rgb(2,0,36);
 background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
@@ -25,10 +49,30 @@ h3{
 	font-size: 12pt;
 }
 
+h4{
+	font-size: 9pt;
+}
+
+h1, h2, h3, h4{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header{
+	margin: 20px;
+	height: 10vh;
+}
+
+/*--------INDEX--------*/
+
 #wrapper{
 	width: 100vw;
 	height: 100vh;
 	padding: 20px 33%;
+}
+
+#wrapper h1{
 	color: white;
 }
 
@@ -56,11 +100,181 @@ h3{
 	gap: 5px;
 }
 
-.rojo{
-	color: red;
+.btn-estacion:hover{
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.btn-estacion:active{
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 .derecha{
 	display: flex;
 	justify-content: right;
+}
+
+/*--------PANEL--------*/
+
+#opciones{
+	display: flex;
+	justify-content: space-around;
+	gap:20px;
+	height: 100%;
+}
+
+#opciones button{
+	border:none;
+	width: 20%;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.55);
+	border-radius: 10px;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+#opciones button:hover{
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+#opciones button:active{
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+#contenido{
+	background-color: rgba(0, 0, 0, 0.55);
+	color: white;
+	border-radius: 10px;
+	height: 80vh;
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+#panel-container{
+	padding:8px;
+	height: 50%;
+	width: 100%;
+}
+
+#grafico{
+	height: 50%;
+	width: 100%;
+}
+
+#panel-title{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.title-info{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	gap: 5px;
+}
+
+#panel-container-temperatura, #panel-container-viento, #panel-container-fuego{
+	display: flex;
+}
+
+.panel-col{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.col-items{
+	width: 100%;
+}
+
+.item-title{
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.col-important{
+	display: flex;
+	justify-content: center;
+}
+
+.important-val-int{
+	font-size: 80px;
+}
+
+.important-val-unit{
+	  font-size: 36px;
+}
+
+.important-val-dec{
+	  font-size: 37px;
+}
+
+.panel-row{
+	display: flex;
+	justify-content: center;
+	gap:10px;
+}
+
+#temp-max, #temp-min, #sens-min, #sens-max{
+	text-align: center;
+}
+
+#sens-val-int{
+	font-size: 80px;
+}
+
+#item-viento{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	font-size: 40px;
+}
+
+#item-viento i{
+	font-size: 40px !important;
+}
+
+.item-value{
+	text-align: center;
+}
+
+#grafico__container{
+	position: relative;
+	height: 100%;
+	width: 100%;
+  	padding: 0.5em;
+}
+
+@media screen and (max-width: 650px) {
+
+    #wrapper {
+        padding: 10px;
+    }
+
+    header{
+    	height: auto;
+    }
+
+    #opciones {
+		gap:5px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#opciones button{
+		width: 100%;
+		height: 30px;
+		padding: 5px;
+	}
 }
