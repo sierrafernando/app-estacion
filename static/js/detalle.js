@@ -1,4 +1,4 @@
-let chipip = "";
+let chipid = "";
 
 let fec = [];
 let tem = [];

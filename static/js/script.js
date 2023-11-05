@@ -1,4 +1,4 @@
-// Evento que se ejecuta cuando se carga completamente la pÃ¡gina
+// Evento que se ejecuta cuando se carga completamente la pagina
 document.addEventListener("DOMContentLoaded", () => {
 
 	// pedimos las estaciones
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	})
 })
 
-// PeticiÃ³n asincrona de la lista de estaciones
+// Peticion asincrona de la lista de estaciones
 async function loadEstaciones(){
 	const response = await fetch("https://mattprofe.com.ar/proyectos/app-estacion/datos.php?mode=list-stations")
 	const data = await response.json()
@@ -21,7 +21,7 @@ async function loadEstaciones(){
 	return data
 }
 
-// Crea un nuevo botÃ³n con los datos de info
+// Crea un nuevo boton con los datos de info
 function addBtnEstacion(info){
 
 	let tpl = document.querySelector("#tpl-btn-estacion");
@@ -29,12 +29,12 @@ function addBtnEstacion(info){
 
 	console.log(info);
 
-	// cargamos los datos del botÃ³n clonado
-	clon.querySelector(".btn-estacion").setAttribute("href", "./detalle.php?chipid="+info.chipid);
+	// cargamos los datos del boton clonado
+	clon.querySelector(".btn-estacion").setAttribute("href", "./detalle/"+info.chipid);
 	clon.querySelector(".estacion-ubicacion").innerHTML= '<i class="rojo material-symbols-outlined">location_on</i>'+'<h3>'+info.ubicacion+'<h3>';
 	clon.querySelector(".estacion-visitas").innerHTML = '<h3>'+info.visitas+'</h3>'+'<i class="rojo material-symbols-outlined">rss_feed</i>'
 	clon.querySelector(".estacion-apodo").innerHTML = '<h2>'+info.apodo+'</h2>';
 	
-	// Agrega un nuevo botÃ³n de estaciÃ³n
+	// Agrega un nuevo boton de estacion
 	document.querySelector("#list-estacion").appendChild(clon)
 }

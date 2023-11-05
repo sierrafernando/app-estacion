@@ -64,16 +64,95 @@ header{
 	height: 10vh;
 }
 
-/*--------INDEX--------*/
+/*--------404--------*/
+#wrapper-404{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
-#wrapper{
+#card-404{
+	background-color: rgba(0, 0, 0, 0.55);
+	color: white;
+	width: 400px;
+	height: 350px;
+	padding:40px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+
+	& h1{
+		font-size: 60pt;
+	}
+
+	& h2{
+		font-size: 17pt;
+	}
+}
+
+/*--------LANDING--------*/
+#wrapper-landing{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 100vw;
+	height: 100vh;
+	padding: 0 10%;
+	color: black;
+	background-image: url("../../resources/img/cielo.jpeg");
+	background-position: center;
+	justify-content: center;
+	-webkit-background-size: cover; /* For WebKit*/ 
+	-moz-background-size: cover; /* Mozilla*/ 
+	-o-background-size: cover; /* Opera*/ 
+	background-size: cover;
+	background-repeat: repeat;
+
+	& p{
+		line-height: 1.5em;
+    	font-size: 15pt;
+    	border-radius: 20px;
+    	color: white;
+    	padding: 20px;
+		background-color: rgba(0, 0, 0, 0.55);
+	}
+
+	& h1{
+		justify-content: initial;
+		font-size: 37pt;
+	}
+}
+
+#btn-acceder{
+	width: 150px;
+	background-color: #2e15db;
+	padding: 15px;
+	font-size: 20pt;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	border-radius: 10px;
+}
+
+#btn-acceder:hover{
+	background-color: #2000ff;
+}
+
+/*--------PANEL--------*/
+
+#wrapper-panel{
 	width: 100vw;
 	height: 100vh;
 	padding: 20px 33%;
-}
 
-#wrapper h1{
+	& h1{
 	color: white;
+	}
 }
 
 #list-estacion{
@@ -113,16 +192,15 @@ header{
 	justify-content: right;
 }
 
-/*--------PANEL--------*/
+/*--------DETALLE--------*/
 
 #opciones{
 	display: flex;
 	justify-content: space-around;
 	gap:20px;
 	height: 100%;
-}
 
-#opciones button{
+	& button{
 	border:none;
 	width: 20%;
 	text-align: center;
@@ -133,34 +211,61 @@ header{
 	display: flex;
   	align-items: center;
   	justify-content: center;
-}
+  	font-size: 12pt;
+  	gap: 5px;
+  	cursor: pointer;
+	}
 
-#opciones button:hover{
+	& button:hover{
 	background-color: rgba(0, 0, 0, 0.7);
-}
+	}
 
-#opciones button:active{
+	& button:active{
 	background-color: rgba(0, 0, 0, 0.8);
+	}
 }
 
 #contenido{
 	background-color: rgba(0, 0, 0, 0.55);
 	color: white;
 	border-radius: 10px;
-	height: 80vh;
 	margin: 20px;
 	display: flex;
 	flex-direction: column;
+	position: relative;
+}
+
+#btn-volver{
+	width: 30px;
+	height: 40px;
+	background-color: #2e15db;
+	border-radius: 10px 0 10px 0;
+	position: absolute;
+
+  	& a{
+  		width: 100%;
+  		height: 100%;
+		color: white;
+		text-decoration: none;
+		display: flex;
+	  	align-items: center;
+	  	justify-content: center;
+  		font-size: 25pt !important;
+  	}
+}
+
+#btn-volver:hover{
+	background-color: #2000ff;
 }
 
 #panel-container{
 	padding:8px;
-	height: 50%;
+	height: 250px;
 	width: 100%;
 }
 
 #grafico{
-	height: 50%;
+	height: 250px;
 	width: 100%;
 }
 
@@ -238,10 +343,11 @@ header{
 	justify-content: center;
 	gap: 5px;
 	font-size: 40px;
-}
+	flex-wrap: wrap;
 
-#item-viento i{
+	& i{
 	font-size: 40px !important;
+	}
 }
 
 .item-value{
@@ -257,7 +363,11 @@ header{
 
 @media screen and (max-width: 650px) {
 
-    #wrapper {
+	#wrapper-landing{
+		padding: 0 10px;
+	}
+
+    #wrapper-panel {
         padding: 10px;
     }
 
@@ -267,14 +377,18 @@ header{
 
     #opciones {
 		gap:5px;
-		flex-direction: column;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
+
+		& button{
+		width: 49%;
+    	height: 40px;
+   		padding: 5px;
+		}
 	}
 
-	#opciones button{
-		width: 100%;
-		height: 30px;
-		padding: 5px;
+	#item-viento{
+		font-size: 20pt;
 	}
 }

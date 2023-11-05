@@ -1,25 +1,16 @@
-<?php
-	
-	if (isset($_GET["chipid"])){
-		$chipid = $_GET["chipid"];	
-	}
-	
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Panel</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" 
-/>
+	<title>app-estacion - detalle</title>
+	<link rel="stylesheet" href="{{URL_WEB}}/static/css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js" defer></script>
-	<script type="text/javascript" src="detalle.js" defer></script>
+	<script type="text/javascript" src="{{URL_WEB}}/static/js/detalle.js" defer></script>
 </head>
 <body>
-	<div id="chipid" style="display:none;"><?php echo $chipid?></div>
+	<div id="chipid" style="display:none;">{{CHIP_ID}}</div>
 	<header>
 		<nav id="opciones">
 			<button id="btn__temperatura">
@@ -45,6 +36,9 @@
 		</nav>
 	</header>
 	<div id="contenido">
+		<div id="btn-volver">
+			<a class="material-symbols-outlined" href="{{URL_WEB}}/panel">keyboard_arrow_left<a>
+		</div>
 		<div id="panel-container">
 			<div id="panel-title">
 				<div class="title-info">
