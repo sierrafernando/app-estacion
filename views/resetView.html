@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>app-estacion - Reset</title>
+	<link rel="stylesheet" href="{{URL_WEB}}/static/css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+	<script type="text/javascript" src="{{URL_WEB}}/static/js/msjScript.js" defer></script>
+</head>
+<body>
+
+	<div id="mensaje" style="display:none;">{{MENSAJE}}</div>
+
+	<div id="wrapper-form">
+		<div id="card-form">
+				<h1>Restablecer</h1>
+				<form method="post" id="form">
+					<label for="contraseña">Contraseña</label>
+					<input id="txt_pass" type="password" name="txt_pass">
+					<label for="contraseña">Repetir contraseña</label>
+					<input id="txt_pass2" type="password" name="txt_pass2">
+					
+					<label id="mensaje_lbl" for="mensaje"></label>
+					<input type="submit" name="btn_recover" id="btn-recover" class="btn-acceder" value="Restablecer contraseña">
+				</form>
+		</div>	
+	</div>
+	
+</body>
+</html>
+
+

@@ -1,11 +1,14 @@
 <?php
+	$chipid = explode("/",$_SERVER["REQUEST_URI"]);
 
-$tpl = new Helper('views/detalleView.html');
+	if(!isset($_SESSION[APP_NAME]["user_name"])){
+		header("Location: ../login/".end($chipid));
+	} else {
 
-$chipid = explode("/",$_SERVER["REQUEST_URI"]);
+		$tpl = new Helper('views/detalleView.html');
 
-$tpl->assign("CHIP_ID", end($chipid));
+		$tpl->assign("CHIP_ID", end($chipid));
 
-$tpl->printToScreen();
-
+		$tpl->printToScreen();
+	}
 ?>

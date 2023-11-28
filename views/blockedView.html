@@ -3,24 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>app-estacion - 404</title>
+	<title>app-estacion - Blocked</title>
 	<link rel="stylesheet" href="{{URL_WEB}}/static/css/style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+	<script type="text/javascript" src="{{URL_WEB}}/static/js/msjScript.js" defer></script>
 </head>
 <body>
+	
+	<div id="mensaje" style="display:none;">{{MENSAJE}}</div>
 
 	<div class="wrapper-tiny">
 		<div class="card-tiny">
 			<div>	
-				<h2>ERROR</h2>
-				<h1>404</h1>
+				<h1>Blocked</h1>
+				<h2 id="mensaje_grande"></h2>
 			</div>
-			<h2>Recurso no encontrado</h2>
-
-			<a href="{{URL_WEB}}/panel" class="btn-acceder">Volver</a>
+			<a href="{{URL_WEB}}/landing" class="btn-acceder">Volver</a>
 		</div>	
 	</div>
-	
-	
 </body>
 </html>

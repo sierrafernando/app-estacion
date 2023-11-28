@@ -4,7 +4,16 @@
 
 	include 'env.php';
 
+	include 'models/dbAbstractModel.php';
+	include 'models/UserModel.php';
+	include 'models/UpdateModel.php';
+
 	include 'lib/helper.php';
+	include 'lib/sendmail.php';
+
+	include 'lib/Mailer/src/PHPMailer.php';
+	include 'lib/Mailer/src/SMTP.php';
+	include 'lib/Mailer/src/Exception.php';
 
 	$_SECTION = explode("/", $_SERVER["REQUEST_URI"]);
 
@@ -25,21 +34,12 @@
 	}
 
 	// Sesion iniciada
-	/*
-	if(isset($_SESSION[APP_NAME])){
-
-		if($section=='landing' || $section=='login' || $section=='register'){
-			$section='panel';
-		}
-
-	}else{ // Sesion no iniciada
-		if($section=='panel' || $section=='logout'){
-			$section='landing';
+	if(isset($_SESSION[APP_NAME]["user_name"])){
+		// En caso de esta logueado
+		if($section=="login" || $section=="register" || $section=="validate" || $section=="recovery" || $section=="reset"){
+				$section="panel";
 		}
 	}
-	*/
 	
 	include "controllers/{$section}Controller.php";
-
-
  ?>

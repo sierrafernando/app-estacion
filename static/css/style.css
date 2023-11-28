@@ -65,7 +65,7 @@ header{
 }
 
 /*--------404--------*/
-#wrapper-404{
+.wrapper-tiny{
 	width: 100vw;
 	height: 100vh;
 	display: flex;
@@ -73,7 +73,7 @@ header{
 	align-items: center;
 }
 
-#card-404{
+.card-tiny{
 	background-color: rgba(0, 0, 0, 0.55);
 	color: white;
 	width: 400px;
@@ -88,10 +88,12 @@ header{
 
 	& h1{
 		font-size: 60pt;
+		text-align: center;
 	}
 
 	& h2{
 		font-size: 17pt;
+		text-align: center;
 	}
 }
 
@@ -128,7 +130,7 @@ header{
 	}
 }
 
-#btn-acceder{
+.btn-acceder{
 	width: 150px;
 	background-color: #2e15db;
 	padding: 15px;
@@ -139,8 +141,75 @@ header{
 	border-radius: 10px;
 }
 
-#btn-acceder:hover{
+.btn-acceder:hover{
 	background-color: #2000ff;
+}
+
+/*--------LOGIN--------*/
+#wrapper-form{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+#card-form{
+	background-color: rgba(0, 0, 0, 0.55);
+	color: white;
+	width: 400px;
+	padding:40px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+
+	& h1{
+		font-size: 50pt;
+	}
+
+	& h2{
+		font-size: 17pt;
+	}
+}
+
+.link_white{
+	color: white;
+	text-decoration: none;
+}
+
+#mensaje_lbl{
+	color: red;
+	font-size: 13pt !important;
+	text-align: center;
+}
+
+#form{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+
+	& label{
+		font-size: 20pt;
+	}
+
+	& input{
+		padding: 5px;
+		height: 40px;
+		font-size: 15pt;
+		width: 80%;
+		border-radius: 8px;
+		border:none;
+	}
+
+	& input[type=submit]{
+
+	}
 }
 
 /*--------PANEL--------*/

@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
 async function loadEstaciones(){
 	const response = await fetch("https://mattprofe.com.ar/proyectos/app-estacion/datos.php?mode=list-stations")
 	const data = await response.json()
-
 	return data
 }
 
@@ -26,8 +25,6 @@ function addBtnEstacion(info){
 
 	let tpl = document.querySelector("#tpl-btn-estacion");
 	let clon = tpl.content.cloneNode(true);
-
-	console.log(info);
 
 	// cargamos los datos del boton clonado
 	clon.querySelector(".btn-estacion").setAttribute("href", "./detalle/"+info.chipid);

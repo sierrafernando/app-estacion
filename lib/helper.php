@@ -51,6 +51,18 @@
 
 		}
 
+		public function assign_array($var, $value){
+
+			if(!$this->testVar($var)){
+
+				echo("La variable <b>$var</b> no existe dentro de la plantilla <b>".$this->url_tpl."</b>");
+				exit();
+			}
+
+			$this->tpl = str_replace("{{{$var}}}", var_dump($value), $this->tpl);
+
+		}
+
 		public function printToScreen(){
 			echo $this->tpl;
 		}
