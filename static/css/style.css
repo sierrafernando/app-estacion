@@ -261,6 +261,16 @@ header{
 	justify-content: right;
 }
 
+/*ADMIN*/
+
+#h1_admin{
+	font-size: 30pt;
+}
+
+.btn_admin{
+	width: 80% !important;
+}
+
 /*--------DETALLE--------*/
 
 #opciones{

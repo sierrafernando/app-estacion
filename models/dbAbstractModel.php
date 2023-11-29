@@ -10,16 +10,13 @@
 		public $db;
 		public $last_query;
 		
-		private function connect(){
-			$this->db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+		public $conexion;
 
-			// var_dump($this->db);
+		function __construct(){             
+			$this->db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);                                   						
 		}
 
-
 		public function query($query){
-
-			$this->connect();
 
 			$this->last_query = $query;
 			$list = $this->db->query($query);

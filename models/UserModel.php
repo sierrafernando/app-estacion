@@ -6,20 +6,23 @@
 	 */
 	class User extends DBAbstract
 	{
-
-		public $token;
-		public $email;
-		public $pass;
-		public $activo = false;
-		public $bloqueado = false;
-		public $recupero = false;
-		public $token_action;
-		public $add_date;
-		public $recover_date;
-
 		private $register = true;
 
 		function __construct($email){
+			parent::__construct();
+			$response = $this->db->query("SELECT * FROM appEstacion__tracker");
+            $campos = $response->fetch_fields();
+
+
+            foreach ($campos as $key => $campo) {
+                $buffer = $campo->name;
+                $this->$buffer = "";
+            }
+
+			$this->activo = false;
+			$this->bloqueado = false;
+			$this->recupero = false;
+
 			$this->email = $email;
 
 			// busco si el usuario está registrado

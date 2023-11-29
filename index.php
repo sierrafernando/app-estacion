@@ -7,6 +7,7 @@
 	include 'models/dbAbstractModel.php';
 	include 'models/UserModel.php';
 	include 'models/UpdateModel.php';
+	include 'models/TrackerModel.php';
 
 	include 'lib/helper.php';
 	include 'lib/sendmail.php';

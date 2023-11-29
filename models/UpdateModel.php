@@ -7,18 +7,21 @@
 	class Update extends DBAbstract
 	{
 
-		public $user = false;
-		public $email;
-		public $token_action;
-		public $token;
-		public $activo = false;
-		public $bloqueado = false;
-		public $recupero = false;
-		public $active_date;
-		public $blocked_date;
-		public $update_date;
-
 		function __construct($type, $data){
+			parent::__construct();
+            $response = $this->db->query("SELECT * FROM appEstacion__tracker");
+            $campos = $response->fetch_fields();
+
+
+            foreach ($campos as $key => $campo) {
+                $buffer = $campo->name;
+                $this->$buffer = "";
+            }
+
+			$this->user = false;
+			$this->activo = false;
+			$this->bloqueado = false;
+			$this->recupero = false;
 
 			// Busco si el usuario esta registrado
 			$sql = "SELECT * FROM `appEstacion__usuarios` WHERE `$type`='$data';";
